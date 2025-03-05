@@ -1,0 +1,27 @@
+{{#> layout currentPage='addHero'}}
+    
+       
+            <h1 class="text-center">Add Hero</h1>
+            <form action="/add-hero" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Hero Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="typeId" class="form-label">Hero Type</label>
+                    <select class="form-control" id="typeId" name="typeId" required>
+                        {{#each types}}
+                        <option value="{{this.id}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="heroImage" class="form-label">Upload Hero Image</label>
+                    <input type="file" class="form-control" id="heroImage" name="heroImage">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a href="/" class="btn btn-secondary">Back</a>
+                </div>
+            
+{{/layout}}

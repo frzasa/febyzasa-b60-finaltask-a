@@ -1,0 +1,88 @@
+{{#> layout currentPage='Register'}}
+<!-- REGISTER PAGE -->
+<main class="container-md mt-5 d-flex justify-content-center" style="min-height: 100vh;">
+
+    <form class="register-form w-50" action="/register" method="post">
+        <h1 class="text-center mb-4">Register</h1>
+
+        <!-- Name Input -->
+        <div class="form-group mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required>
+        </div>
+
+        <!-- Confirm Password Input -->
+        <div class="form-group mb-4">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirm password" required>
+        </div>
+
+    {{#if messages.error}}
+        <div class="alert alert-danger" role="alert">
+        {{messages.error}}
+        </div>
+    {{/if}}
+
+        <!-- Register Button -->
+        <div class="text-center">
+            <button type="submit" class="btn register-btn w-100">Register</button>
+        </div>
+        
+        <div class="text-center mt-3">
+            Already have an account? <a href="/login">Login here</a>
+        </div>
+    </form>
+</main>
+
+<!-- Custom Styling -->
+<style>
+    /* Register Button */
+    .register-btn {
+        background-color: cornflowerblue;
+        color: white;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Keep button color on hover, focus, and active states */
+    .register-btn:hover,
+    .register-btn:focus,
+    .register-btn:active {
+        background-color: cornflowerblue !important;
+        color: white !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Plain grey border for input fields */
+    .form-control {
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Keep input field border grey even when focused */
+    .form-control:focus {
+        border: 1px solid grey;
+        box-shadow: none;
+    }
+</style>
+
+{{/layout}}

@@ -1,0 +1,35 @@
+{{#> layout currentPage='Not Found'}}
+<div class="container">
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <a href="/" class="btn btn-primary btn-home">Go back to homepage</a>
+    </div>
+</div>
+
+{{#*inline "styles"}}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .error-container {
+        text-align: center;
+        margin-top: 100px;
+    }
+    h1 {
+        font-size: 6rem;
+        color: #dc3545;
+    }
+    p {
+        font-size: 2rem;
+        color: #6c757d;
+    }
+    .btn-home {
+        margin-top: 20px;
+    }
+</style>
+{{/inline}}
+
+{{#*inline "scripts"}}
+{{/inline}}
+{{/layout}}

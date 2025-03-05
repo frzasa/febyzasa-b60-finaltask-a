@@ -1,0 +1,58 @@
+{{#> layout currentPage='Home'}}
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="hero-card">
+        <img src="/assets/img/rhaenyraa.jpg" class="img-fluid rounded" alt="Hero Image">
+        <h5 class="mt-1">The Dragon Queen</h5>
+        <p class="mb-1">Agility</p>
+        <a href="/hero-edit/1" class="btn btn-warning btn-sm mt-1 mb-3">Edit</a>
+        <form action="/hero/1?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger btn-sm mt-1 mb-3">Delete</button>
+        </form>
+        <a href="/hero/1" class="btn btn-info btn-sm mt-1 mb-3">Detail</a>
+      </div>
+    </div>
+    
+    <div class="col-md-3">
+      <div class="hero-card">
+        <img src="/assets/img/daenerys.jpg" class="img-fluid rounded" alt="Hero Image">
+        <h5 class="mt-1">The Mother of Dragons</h5>
+        <p class="mb-1">HP</p>
+        <a href="/hero-edit/2" class="btn btn-warning btn-sm mt-1 mb-3">Edit</a>
+        <form action="/hero/2?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger btn-sm mt-1 mb-3">Delete</button>
+        </form>
+        <a href="/hero/2" class="btn btn-info btn-sm mt-1 mb-3">Detail</a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="hero-card">
+        <img src="/assets/img/aegoni.jpg" class="img-fluid rounded" alt="Hero Image">
+        <h5 class="mt-1">The Conqueror</h5>
+        <p class="mb-1">Strength</p>
+        <a href="/hero-edit/3" class="btn btn-warning btn-sm mt-1 mb-3">Edit</a>
+        <form action="/hero/3?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger btn-sm mt-1 mb-3">Delete</button>
+        </form>
+        <a href="/hero/3" class="btn btn-info btn-sm mt-1 mb-3">Detail</a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="hero-card">
+        <img src="/assets/img/daemon.webp" class="img-fluid rounded" alt="Hero Image">
+        <h5 class="mt-1">The Rogue Prince</h5>
+        <p class="mb-1">Strength</p>
+        <a href="/hero-edit/4" class="btn btn-warning btn-sm mt-1 mb-3">Edit</a>
+        <form action="/hero/4?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger btn-sm mt-1 mb-3">Delete</button>
+        </form>
+        <a href="/hero/4" class="btn btn-info btn-sm mt-1 mb-3">Detail</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/layout}}
